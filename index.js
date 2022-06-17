@@ -1,14 +1,3 @@
-// function sequence() {
-//   var ending = document.getElementById("num").value;
-//   var start = [0 , 1];
-//   for (var i = 2; i <= ending; i++){
-//     start.push(start[i - 2] + start[i - 1]);
-//     // start[i] = start[i - 2] + start[i - 1];
-//     document.getElementById("res").value = start[i].split(",");
-//     console.log(start[i]);
-//   }
-// }
-
 function sequence() {
   var a, b, result;
   a = 0;
