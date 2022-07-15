@@ -1,18 +1,19 @@
 function sequence() {
-  var a, b, result;
-  a = 0;
-  b = 1;
-  result = b;
-  var finalResult = [];
-  var num = document.getElementById("num").value;
-  for(var i = 1; i <= num; i++){
-    result = a + b;
-    a = b;
-    b = result;
-    finalResult.push(result);
+    var n = document.getElementById("num").value;
+    var output = [];
+    if (n === 1){
+        output = [0];
+    }
+    else if (n === 2){
+        output = [0, 1];
+    }
+    else {
+      output = [0, 1];
+        for (var i = 2; i < n; i++) {
+         output.push (output [output.length - 2] + output[output.length - 1]);   
+        }
+    }
     document.getElementById("res").style.display = "block";
-    document.getElementById("res").value = finalResult;
+    document.getElementById("res").value = output;
+    }
 
-    console.log(finalResult);
-  }
-}
